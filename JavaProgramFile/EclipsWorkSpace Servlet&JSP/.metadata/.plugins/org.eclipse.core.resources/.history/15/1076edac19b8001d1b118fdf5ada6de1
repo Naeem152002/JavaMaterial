@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <%@page import="java.util.Random,java.util.ArrayList,java.io.*" 
+   
+     %>
+     
+     
+     
+     <%
+     Random rn=new  Random();
+     
+     int n=rn.nextInt(100);
+     out.println("Rendom Number is :"+rn);
+     
+     %>
+    
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+     class Test1 {
+			/* D show () {
+				 D b=new D();
+				return new D();// anomeyous object
+			}*/
+			 D get object() {
+				 D y=new D();
+			 }
+			public static void main(String arg []) {
+				Test1 t =new Test1 ();
+				System.out.println(t.show ());
+				System.out.println(t.get object());
+			}
+	}
+	class D
+	{
+	D(){
+		System.out.println("B constructor....");
+	}
+	}
+	
+
+

@@ -1,0 +1,25 @@
+package inputoutput;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.SequenceInputStream;
+
+public class Sequence1_O {
+	public static void main(String args[]) {
+		
+	try {
+		FileInputStream fileInputStream1=new FileInputStream("C:\\Users\\naeem\\OneDrive\\Desktop\\f1.txt");
+		FileInputStream fileInputStream2=new FileInputStream("C:\\Users\\naeem\\OneDrive\\Desktop\\f2.txt");
+		SequenceInputStream sequenceInputStream=new SequenceInputStream(fileInputStream1,fileInputStream2);
+	while(true) {
+		
+		int i=sequenceInputStream.read(); 
+		if(i==-1)// -1 ka matlab hai end of file
+			break;
+		System.out.print((char)i);
+	}}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+	}
+}

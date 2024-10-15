@@ -1,0 +1,22 @@
+
++//with out this first method
+public class Test10 {
+		int x=10;
+		void show
+		(int x,Test10 t) {
+			//int x=20;
+			System.out.println(x);
+			System.out.println(t.x);
+			System.out.println(t);
+			System.out.println(this);
+		}
+
+		public static void main(String[] args) {
+			// TODO Auto-generated method stub
+	Test10 t=new Test10();
+	t.show(20,t);
+		}
+
+	}
+
+

@@ -1,0 +1,64 @@
+package com.thread.practice;
+
+class Table{
+	public void printTable(int x) {
+		for(int i=1;i<5;i++) {
+			System.out.println(i);
+		}
+	}
+}
+
+class P implements Runnable{
+	
+	P(String name,Table t){	
+	
+	}
+
+	@Override
+	public void run() {
+		
+		
+	}
+	
+}
+class Q implements Runnable{
+	
+	Q(String name){
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+class R implements Runnable{
+	R(String name){
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+
+public class Test6 {
+	public static void main(String[]args) {
+		Table t=new Table();
+		
+		P p=new P("First",t);
+		Q q=new Q("Second");
+		R r=new R("Third");
+		
+		Thread t=new Thread(p);
+		t.start();
+		
+	}
+
+}

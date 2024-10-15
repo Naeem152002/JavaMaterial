@@ -1,0 +1,32 @@
+package com.thread.practice;
+
+public class Test {
+	
+	public static void main(String[]args) {
+		
+		Runnable r1=new Runnable() {
+
+			@Override
+			public void run() {
+				System.out.println("Thread excute-1");
+				
+			}
+			
+		};
+		r1.run();
+		
+		Runnable r2=new Runnable() {
+			
+			@Override
+			public void run() {
+				System.out.println("Thread Excute-2");
+				
+			}
+		};
+		Thread t=new Thread(r1);
+		t.start();
+		
+		
+	}
+
+}

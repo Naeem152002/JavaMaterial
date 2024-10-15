@@ -1,0 +1,26 @@
+package com.thread.practice;
+
+class A implements I{
+	
+}
+
+interface I{
+	void show();
+}
+
+public class Test1 {
+	public static void main(String[]args) {
+		
+		I i=new I() {
+
+			@Override
+			public void show() {
+				System.out.println("hello");
+				
+			}
+			
+		};
+		
+	}
+
+}

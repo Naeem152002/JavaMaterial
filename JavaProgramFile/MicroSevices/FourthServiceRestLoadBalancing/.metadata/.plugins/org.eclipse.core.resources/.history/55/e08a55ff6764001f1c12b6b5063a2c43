@@ -1,0 +1,23 @@
+package com.lcwd.rating.service.services;
+
+import java.util.List;
+
+import com.lcwd.rating.service.dto.RatingDto;
+import com.lcwd.rating.service.entities.Rating;
+
+public interface RatingService {
+	RatingDto saveRating(RatingDto ratingDto);
+	
+	RatingDto updateRating(RatingDto ratingDto,int ratingId);
+	
+	void deleteRating(int ratingId);
+
+	Rating getSingleRating(int ratingId);
+	
+	List<Rating> getAllRatings();
+
+	List<Rating> getRatingByUserId(int userId);
+
+	List<Rating> getRatingByHotelId(int hotelId);
+
+}

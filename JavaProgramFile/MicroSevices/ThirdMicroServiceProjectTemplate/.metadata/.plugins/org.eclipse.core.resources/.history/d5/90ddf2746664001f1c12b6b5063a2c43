@@ -1,0 +1,95 @@
+package com.services;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.dto.UserDto;
+import com.entities.User;
+import com.excetpions.ResourceNotFoundException;
+import com.repo.UserRepo;
+
+
+@Service
+public class UserServiceImpl implements UserService{
+	
+
+	@Autowired
+	private UserRepo userRepo;
+	@Autowired
+	private RestTemplate restTemplate;
+	
+
+	private Logger logger=LoggerFactory.getLogger(UserServiceImpl.class);
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+	
+	@Override
+	public User getSingleUser(int userId) { 
+	User user=userRepo.findById(userId).orElseThrow(()->new ResourceNotFoundException("User with given id is not found on server!!"+userId) );
+//	Rating[] ratingsOfUser=restTemplate.getForObject("http://localhost:8086/ratings/users/"+user.getUserId(),Rating[].class);
+//	logger.info("{}",ratingsOfUser);
+//	
+//	List<Rating>ratings=Arrays.stream(ratingsOfUser).toList();
+//
+//	List<Rating>ratingList=ratings.stream().map(rating -> {
+//		
+//	ResponseEntity<Hotel>forEntity=restTemplate.getForEntity("http://localhost:8085/hotels/"+rating.getHotelId(), Hotel.class);
+//
+//		logger.info("response status code:{}",forEntity.getStatusCode());
+//	return rating;
+//	}).collect(Collectors.toList())	;
+//	
+//	user.setRatings(ratingList);
+	
+	return user;
+	}
+
+
+
+	@Override
+	public UserDto saveUser(UserDto userDto) {
+		User user=modelMapper.map(userDto, User.class);
+		User save=userRepo.save(user);
+		return modelMapper.map(save, UserDto.class);
+	}
+
+
+
+	@Override
+	public UserDto updateUser(UserDto userDto, int userId) {
+		User u=userRepo.findById(userId).orElseThrow(()->new ResourceNotFoundException("User with given id is not found on server!!"+userId) );
+		u.setName(userDto.getName());
+		u.setEmail(u.getEmail());
+		u.setAbout(userDto.getAbout());
+
+		return null;
+	}
+
+
+
+	@Override
+	public void deleteUser(int userId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public List<UserDto> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+	
+
+}

@@ -1,0 +1,18 @@
+package com.arrays;
+
+public class Test12 {
+	public static int trappingWater(int height[]) {
+		int n=height.length;
+		int leftMax[]=new int[n];
+		int rightMax[]=new int[n];
+		leftMax[0]=height[0];
+		rightMax[n-1]=height[n-1];
+		return 0;
+	}
+	
+	//Auxliarray
+	public static void main(String[]args) {
+		int height[]= {4,2,0,6,3,2,5};
+		}
+
+}

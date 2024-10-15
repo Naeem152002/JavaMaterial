@@ -1,0 +1,13 @@
+package com.interthreadcommunication;
+
+public class Test2 {
+	
+	public void show() {
+	
+	}
+	
+	public static void main(String[]args) {
+		
+	}
+
+}

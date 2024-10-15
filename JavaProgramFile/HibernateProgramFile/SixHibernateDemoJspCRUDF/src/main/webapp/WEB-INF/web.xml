@@ -1,0 +1,20 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>RegisterServlett</servlet-name>
+  	<display-name>RegisterServlett</display-name>
+  	<description></description>
+  	<servlet-class>RegisterServlett</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegisterServlett</servlet-name>
+  	<url-pattern>/RegisterServlett</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+  <welcome-file>RegisterPage.html</welcome-file>
+  </welcome-file-list>
+</web-app>

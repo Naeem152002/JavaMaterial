@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%-- ID Is : ${param.id }<br>
+Name is : ${param.name }<br>
+Email Is :${param.email}<br>
+Age Is : ${param.age}--%>
+
+
+<h1>Welcome to Display output</h1>
+${sessionScope.id}
+${sessionScope.name}
+${sessionScope.email}
+${sessionScope.age}
+</body>
+</html>

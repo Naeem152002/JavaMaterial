@@ -1,0 +1,11 @@
+
+public class Test1 {
+static {
+	Thread t=Thread.currentThread();
+	System.out.println(t);
+}
+public static void main(String arsg[]) {
+
+	}
+
+}

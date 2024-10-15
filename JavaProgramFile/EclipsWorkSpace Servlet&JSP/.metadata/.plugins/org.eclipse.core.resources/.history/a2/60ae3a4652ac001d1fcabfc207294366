@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<h1>Man Products</h1>
+<body bgcolor="lightgreen">
+
+<p>Select Man Item </p>
+<form action="ManProduct">
+<input  type="checkbox" name="mproduct"> Shirt  500 <br>
+<input  type="checkbox"  name="mproduct"> Shoes<br>
+<input  type="checkbox"  name="mproduct"> T-Shirt <br>
+<input  type="checkbox"  name="mproduct"> Slipper <br>
+<input  type="checkbox"  name="mproduct"> Jeans<br>
+
+<input type="submit" value="Add Priducts">
+
+<th><a href='Women.html'>Shoping_Continue</a></th>
+</form>
+</body>
+</html>

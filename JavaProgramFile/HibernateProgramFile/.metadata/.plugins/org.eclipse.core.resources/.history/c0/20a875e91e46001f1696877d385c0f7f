@@ -1,0 +1,57 @@
+package com.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.db.FactoryProvider;
+import com.dto.User;
+
+public class UserDaoImpl implements UserDao {
+	SessionFactory factory=FactoryProvider.getSessionFactory();
+
+	@Override
+	public boolean insert(User dto) {
+		Session s=factory.openSession();
+		s.beginTransaction();
+		s.save(dto);
+		s.getTransaction().commit();
+		return true;
+	}
+
+	@Override
+	public User getByEmailAndName(User dto) {
+		User u=null;
+		String hql="from user where name=:name and email=:email";
+		Session s=factory.openSession();
+		u=(User)s.createQuery(hql)
+				.setParameter(1, dto.getName())
+				.setParameter(2, dto.getEmail())
+				.uniqueResult();
+		return u;
+	}
+
+	@Override
+	public User getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateUser(User dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delteUser(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

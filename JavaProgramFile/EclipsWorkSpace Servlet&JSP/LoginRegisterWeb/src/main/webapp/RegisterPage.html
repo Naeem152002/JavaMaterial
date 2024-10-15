@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>RegisterPage</h1>
+	<form action="RegisterServlet" method="post">
+		
+		Agree to TnC<input type="checkbox" name="checkbox" required>
+		<br>
+		Male <input type="radio" name="radio" value="Male" required>Female <input type="radio" name="radio" value="Female" required>
+		<br>
+		Country<select name="country" required>
+			<option value="india">india</option>
+			<option value="usa">usa</option>
+			<option value="spain">spain</option>
+			<option value="dubai">dubai</option>
+		</select>
+		<br>
+		
+		Name <input type="text" name="name" required>
+		<br>
+		Email <input type="email" name="email" required>
+		<br>
+		Mobile <input type="tel" name="mobile" required>
+		<br>
+		Password <input type="password" name="pass" required>
+		<br>
+		<input type="submit">
+		<a href="LoginPage.html">Login</a>
+	</form>	
+</body>
+</html>

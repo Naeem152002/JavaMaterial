@@ -1,0 +1,71 @@
+package com.practice;
+class A extends Thread{
+	A(String name){
+	super(name);
+	}
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName());
+		System.out.println("A");
+	}	
+}
+class B extends Thread{
+	B(String name){
+		super(name);
+		}
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName());
+		A a=new A("A-One");
+		a.start();
+		try {
+			a.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("B");
+	}
+}
+class C extends Thread{
+	C(String name){
+		super(name);
+		}
+	@Override
+	public void run() {
+		A a=new A("A-one");
+		a.start();
+		try {
+			a.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("C");
+	}
+}
+class D extends Thread{
+	D(String name){
+		super(name);
+		}
+	@Override
+	public void run() {
+		System.out.println("D");
+	}	
+}
+
+public class Test3{
+	public static void main(String[]args) throws InterruptedException {
+		
+		B b=new B("B-Two");
+		C c=new C("C-Three");
+		D d=new D("D-Four");
+		b.start();
+		c.start();
+		d.start();
+		
+		
+	}
+
+}

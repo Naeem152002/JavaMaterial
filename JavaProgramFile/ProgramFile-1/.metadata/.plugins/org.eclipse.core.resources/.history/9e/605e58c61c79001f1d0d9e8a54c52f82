@@ -1,0 +1,16 @@
+package com.arraylists;
+
+import java.util.ArrayList;
+
+public class Test2 {
+	
+	public static void main(String[]aargs) {
+		
+		ArrayList<Integer>list=new ArrayList<Integer>();
+		
+		
+		
+		
+	}
+
+}

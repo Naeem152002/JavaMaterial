@@ -1,0 +1,11 @@
+package com.arrays;
+
+public class Test6 {
+	public void subArrays(int a[]) {
+		
+	}
+	public static void main(String[]args) {
+		int a[]= {2,3,5,10,34,25};
+		subArrays(a);
+	}
+}

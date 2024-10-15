@@ -1,0 +1,73 @@
+package com.services;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.entities.User;
+import com.excetpions.ResourceNotFoundException;
+import com.repo.UserRepo;
+
+
+@Service
+public class UserServiceImpl implements UserService{
+	
+
+	@Autowired
+	private UserRepo userRepo;
+	@Autowired
+	private RestTemplate restTemplate;
+	
+
+	private Logger logger=LoggerFactory.getLogger(UserServiceImpl.class);
+
+	@Override
+	public User saveUser(User user) {
+		return this.userRepo.save(user);
+	}
+	@Override
+	public User updateUser(User user, int userId) {
+		User u=userRepo.findById(userId).orElseThrow(()->new ResourceNotFoundException("User with given id is not found on server!!"+userId) );
+		u.setName(user.getName());
+		u.setEmail(user.getEmail());
+		u.setAbout(user.getAbout());
+		return userRepo.save(u);
+	}
+
+	@Override
+	public void deleteUser(int userId) {
+		User u=userRepo.findById(userId).orElseThrow(()->new ResourceNotFoundException("User with given id is not found on server!!"+userId) );
+		userRepo.delete(u);
+	}
+	@Override
+	public User getUser(int userId) { 
+	User user=userRepo.findById(userId).orElseThrow(()->new ResourceNotFoundException("User with given id is not found on server!!"+userId) );
+//	Rating[] ratingsOfUser=restTemplate.getForObject("http://localhost:8086/ratings/users/"+user.getUserId(),Rating[].class);
+//	logger.info("{}",ratingsOfUser);
+//	
+//	List<Rating>ratings=Arrays.stream(ratingsOfUser).toList();
+//
+//	List<Rating>ratingList=ratings.stream().map(rating -> {
+//		
+//	ResponseEntity<Hotel>forEntity=restTemplate.getForEntity("http://localhost:8085/hotels/"+rating.getHotelId(), Hotel.class);
+//
+//		logger.info("response status code:{}",forEntity.getStatusCode());
+//	return rating;
+//	}).collect(Collectors.toList())	;
+//	
+//	user.setRatings(ratingList);
+	
+	return user;
+	}
+	@Override
+	public List<User> getAllUsers() {
+		return userRepo.findAll();
+	}
+
+	
+
+}

@@ -1,0 +1,74 @@
+package com.thread.practice;
+
+class Table{
+	public void printTable(int x) {
+		try {
+			Thread.sleep(1000);
+			System.out.println(Thread.currentThread().getName());
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		for(int i=1;i<5;i++) {
+			System.out.println(x*i);
+		}
+	}
+}
+
+class P implements Runnable{
+	Table t;
+	P(Table t){
+	this.t=t;
+	}
+
+	@Override
+	public void run() {
+		t.printTable(2);
+		
+	}
+	
+}
+class Q implements Runnable{
+	
+	Table t;
+	Q(Table t){
+	this.t=t;
+	}
+	
+	@Override
+	public void run() {
+		t.printTable(4);
+		
+	}
+	
+}
+class R implements Runnable{
+	R(String name){
+		
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+
+public class Test6 {
+	public static void main(String[]args) {
+		Table t=new Table();
+		
+		P p=new P(t);
+		Q q=new Q(t);
+		R r=new R("Third");
+		
+		Thread t1=new Thread(p,"First");
+		t1.start();
+		Thread t2=new Thread(q,"Second");
+		t2.start();
+		
+	}
+
+}

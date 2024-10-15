@@ -1,0 +1,12 @@
+package com.arrays;
+
+public class Test7 {
+	public static  void subArraysSum(int a[]) {
+		
+		
+	}
+	public static void main(String[]args) {
+		int a[]= {2,3,5,10,34,25};
+		subArraysSum(a);
+	}
+}

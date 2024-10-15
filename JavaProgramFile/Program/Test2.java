@@ -1,0 +1,1 @@
+// Java mai blank file bhi compile ho jaati hai

@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="com.dao.*" %>
+    <%@ page import="com.dto.User" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+<th>Id</th>
+
+<th>Name</th>
+
+<th>Email</th>
+
+<th>Password</th>
+
+<th>Mobile</th>
+
+<th>Action</th>
+
+</tr>
+<%
+int id=Integer.parseInt(request.getParameter("id"));
+UserDao dao=new UserDaoImpl();
+User dto=dao.getById(id);
+%>
+<tr>
+<td></td>
+
+<td>Name</td>
+
+<td>Email</td>
+
+<td>Password</td>
+
+<td>Mobile</td>
+
+<td>Action</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>

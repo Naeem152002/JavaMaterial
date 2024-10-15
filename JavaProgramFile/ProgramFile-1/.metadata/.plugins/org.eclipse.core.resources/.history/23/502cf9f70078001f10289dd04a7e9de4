@@ -1,0 +1,16 @@
+package com.arrays;
+
+public class Test10 {
+	//using kedan,s algorthim
+	//Tc-n
+	
+	public static void maxSumSubArrays(int a[]) {
+		
+	}
+	
+	public static void main(String[]args) {
+		int a[]= {1,-2,6,-1,3};
+		maxSumSubArrays(a);
+	}
+
+}

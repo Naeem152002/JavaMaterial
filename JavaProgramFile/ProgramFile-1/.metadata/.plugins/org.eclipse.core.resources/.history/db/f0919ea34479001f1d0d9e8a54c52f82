@@ -1,0 +1,12 @@
+package com.strings;
+
+public class Test {
+	public static boolean palindrome(String str) {
+		return false;
+	}
+	
+	public static void main(String[]args) {
+		String str="racecar";
+	}
+
+}

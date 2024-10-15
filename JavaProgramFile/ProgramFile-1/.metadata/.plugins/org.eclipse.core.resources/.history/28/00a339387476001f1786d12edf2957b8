@@ -1,0 +1,24 @@
+package com.practice;
+
+public class Test1 extends Thread{
+	 
+	@Override
+	public void run() {
+		System.out.println("Thread Excute");
+		
+	}
+	public static void main(String[]args) {
+		System.out.println("main thread working");
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Test1 x= new Test1();
+		Thread t=new Thread(x);
+		t.start();
+		
+
+}
+}

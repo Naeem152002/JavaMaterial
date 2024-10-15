@@ -1,0 +1,22 @@
+package com.arrays;
+
+public class Test7 {
+	public static  void subArraysSum(int a[]) {
+		for(int i=0;i<a.length;i++) {
+			int start=i;
+			for(int j=i;j<a.length;j++) {
+				int end=j;
+				
+				for(int k=start;k<=end;k++) {
+					System.out.print(a[k]+" ");
+				}
+				System.out.println();
+			}
+		}
+		
+	}
+	public static void main(String[]args) {
+		int a[]= {2,3,5,10,34,25};
+		subArraysSum(a);
+	}
+}

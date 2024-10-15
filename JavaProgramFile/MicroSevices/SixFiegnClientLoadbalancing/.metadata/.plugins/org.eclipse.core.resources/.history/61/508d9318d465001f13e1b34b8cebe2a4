@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Naeem Server
+server:
+  port: 8088

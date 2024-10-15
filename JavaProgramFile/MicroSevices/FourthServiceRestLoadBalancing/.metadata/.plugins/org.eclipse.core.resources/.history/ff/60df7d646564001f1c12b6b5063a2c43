@@ -1,0 +1,5 @@
+package com.mappers;
+
+public class UserMapper {
+
+}

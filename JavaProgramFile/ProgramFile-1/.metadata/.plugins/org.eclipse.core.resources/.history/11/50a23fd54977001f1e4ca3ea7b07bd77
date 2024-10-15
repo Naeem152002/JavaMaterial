@@ -1,0 +1,9 @@
+package inf.practice;
+
+abstract class A{
+	void show();
+}
+
+public class Test1 {
+
+}

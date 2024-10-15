@@ -1,0 +1,49 @@
+package com.lcwd.hotel.service.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lcwd.hotel.service.entities.Hotel;
+import com.lcwd.hotel.service.exceptions.ResourceNotFoundException;
+import com.lcwd.hotel.service.repositories.HotelRepo;
+
+@Service
+public class HotelServiceImpl implements HotelService {
+	
+	
+	@Autowired
+	private HotelRepo hotelRepo;
+
+	@Override
+	public Hotel saveHotel(Hotel hotel) {
+
+		return this.hotelRepo.save(hotel);
+	}
+
+	@Override
+	public Hotel getSingleHotel(int hotelId) {
+		Hotel hotel=hotelRepo.findById(hotelId).orElseThrow(()->new ResourceNotFoundException("Hotel with given id is not found on server!!"+hotelId) );
+	return hotel;
+	}
+
+	@Override
+	public Hotel updateHotel(Hotel hotel,int hotelId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(int hotelId) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public List<Hotel> getAllHotels() {
+		return hotelRepo.findAll();
+		
+	}
+
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/XMLSchema-instance"
+xsi:chemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+>
+<bean class="com.dependencyconstructor.collection.Address" id="addr">
+<constructor-arg value="Lucknow"></constructor-arg>
+<constructor-arg value="UP"></constructor-arg>
+<constructor-arg value="India"></constructor-arg>
+</bean>
+<bean class="com.dependencyconstructor.collection.Question" id="qu">
+<constructor-arg value="what is java"></constructor-arg>
+</bean>
+<bean class="com.dependencyconstructor.collection.Answer" id="ans">
+<constructor-arg value="Object oriented programming languange"></constructor-arg>
+</bean>
+<bean class="com.dependencyconstructor.collection.Employee" id="emp">
+<constructor-arg value="Naeem"></constructor-arg>
+<constructor-arg>
+<ref bean="addr"/>
+</constructor-arg>
+<constructor-arg>
+<list>
+<value>how are you</value>
+</list>
+</constructor-arg>
+<constructor-arg>
+<map>
+
+<entry key="what is your name" value="java"></entry>
+
+</map>
+
+</constructor-arg>
+
+<constructor-arg>
+
+<list>
+<ref bean="addr"/>
+</list>
+</constructor-arg>
+<constructor-arg>
+<map>
+
+<entry key-ref="qu" value-ref="ans"></entry>
+
+</map>
+
+</constructor-arg>
+</bean>
+
+</beans>

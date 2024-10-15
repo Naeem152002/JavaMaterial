@@ -1,0 +1,16 @@
+
+public class Test8 {
+	
+	int x=9;{
+	
+	Test8 t=new Test8();
+	
+	}
+	
+public static void main (String args[]) {
+	
+	
+	System.out.println(new Test8().x);
+	
+}
+}

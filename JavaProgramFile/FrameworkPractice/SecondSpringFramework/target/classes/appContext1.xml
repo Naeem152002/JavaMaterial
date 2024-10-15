@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xls="http://www.w3.org/2001/XMLSchema-instance"
+xls:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean class="com.dibycon2.Address" id="add">
+<constructor-arg value="Hardoi"></constructor-arg>
+<constructor-arg value="UP"></constructor-arg>
+<constructor-arg value="India"></constructor-arg>
+
+</bean>
+
+
+<bean class="com.dibycon2.Employee" id="emp">
+<constructor-arg value="1"></constructor-arg>
+<constructor-arg value="Naeem"></constructor-arg>
+<constructor-arg ref="add"></constructor-arg>
+
+</bean>
+
+
+</beans>

@@ -1,0 +1,18 @@
+package com.exservices;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+
+@FeignClient(url="http://localhost:8086", value="RATING-SERVICE")
+public interface RatingClient {
+
+	
+	@GetMapping("/users/{userId}")
+	public ResponseEntity<List<RatingDto>>getRatingByUserId(@PathVariable int userId)
+	
+}

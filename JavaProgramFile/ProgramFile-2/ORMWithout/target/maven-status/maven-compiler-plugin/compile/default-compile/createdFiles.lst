@@ -1,0 +1,4 @@
+com\ormwithout\connectionprovider\ConnectionProvider.class
+com\ormwithout\dao\Dao.class
+com\ormwithout\dto\Dto.class
+com\ormwithout\ORMWithout\Emloyee.class

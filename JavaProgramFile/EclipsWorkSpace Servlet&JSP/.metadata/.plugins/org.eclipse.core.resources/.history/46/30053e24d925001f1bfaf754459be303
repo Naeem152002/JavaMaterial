@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<h1>Config And Context Priject :</h1>
+<body bgcolor="lightBlue">
+<form action="One">
+<input type="email" name="uemail" placeholder="Enter email" required="required">
+<br>
+<br>
+<input type="password" name="upass" placeholder="Enter Password" required="required">
+<br>
+<br>
+<input type="submit" value="Login">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+package com.exservices;
+
+public interface HotelClient {
+
+}

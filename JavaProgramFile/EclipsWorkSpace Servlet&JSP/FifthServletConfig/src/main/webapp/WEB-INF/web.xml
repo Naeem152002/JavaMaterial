@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp_ID">
+	<display-name>FifthServletConfig</display-name>
+	<servlet>
+		<servlet-name>ServletConfig</servlet-name>
+		<display-name>ServletConfig</display-name>
+		<description></description>
+		<servlet-class>com.fifthservletconfig.ServletConfig</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ConfigServlet</servlet-name>
+		<display-name>ConfigServlet</display-name>
+		<description></description>
+		<servlet-class>com.fifthservletconfig.ConfigServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Config</servlet-name>
+		<display-name>Config</display-name>
+		<description></description>
+		<servlet-class>com.fifthservletconfig.Config</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletConfig</servlet-name>
+		<url-pattern>/ServletConfig</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ConfigServlet</servlet-name>
+		<url-pattern>/ConfigServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Config</servlet-name>
+		<url-pattern>/Config</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

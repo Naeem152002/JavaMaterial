@@ -1,0 +1,11 @@
+public class Test3 extends Thread {
+
+	public void run() {
+		System.out.println("hi");
+	}
+	public static void main(String args[]) {
+		
+	Test3 t=new Test3();
+	t.start();
+}
+}

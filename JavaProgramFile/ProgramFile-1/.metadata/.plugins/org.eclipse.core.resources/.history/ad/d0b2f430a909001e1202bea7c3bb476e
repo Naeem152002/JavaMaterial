@@ -1,0 +1,6 @@
+package cmdarg; // command line dena hai to run configiration karo
+public class Test {
+public static void main (String []args) {
+	System.out.println(args[0]);
+}
+}

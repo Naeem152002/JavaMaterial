@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\FourHibernate"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\EighteenHiberComponentwithoutAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\EightHibernateJoinMappingwithoutAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\ElevenOnetoManyRelationmappingWithoutAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\FifteenHibeManytoManywithAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\FifthHibernateWithJsp"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\FourteenHibeManytoManywithoutAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\FourthHibernate"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\HibernateCrudOperation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\NineHibernateJoinMappingWithoutannoation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\SecondHiberante"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\SevenHibernateJspWithanotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\SeventeenHibeonetoonewithAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\SixHibernateDemoJspCRUDF"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\SixteenHibeonetoonewithoutAnnotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\TablePerConcreteClass2withannotation"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\TablePerConcreteClasswithoutannotaion"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\TablePerHierarchy2withannotaion"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\TablePerHierarchywihoutannotaion"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\HibernateProgramFile\TablePerSubClass2withannotation"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="TOGGLE_SELECTED" value="true"/>
+		<item key="DIALOG_WIDTH" value="662"/>
+		<item key="DIALOG_HEIGHT" value="434"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

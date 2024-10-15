@@ -1,0 +1,23 @@
+package com.db;
+
+import org.hibernate.SessionFactory;
+
+public class FactoryProvider {
+	private static SessionFactory factory;
+	
+	private FactoryProvider() {
+		
+	}
+	public static SessionFactory getSessionFactory() {
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return factory;
+
+}
+}

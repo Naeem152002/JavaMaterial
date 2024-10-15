@@ -1,0 +1,70 @@
+package com.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.db.FactoryProvider;
+import com.dto.User;
+
+public class UserDaoImpl implements UserDao {
+	SessionFactory factory=FactoryProvider.getSessionFactory();
+
+	@Override
+	public boolean insert(User dto) {
+		try {
+		Session s=factory.openSession();
+		s.beginTransaction();
+		s.save(dto);
+		s.getTransaction().commit();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+		return true;
+	}
+	@Override
+	public User getByEmailAndName(User dto) {
+	    User u = null;
+	    String hql = "from User where name = :name and email = :email";
+	    Session s = factory.openSession();
+	    try {
+	        u = (User) s.createQuery(hql)
+	                .setParameter("name", dto.getName())
+	                .setParameter("email", dto.getEmail())
+	                .uniqueResult();
+	    } finally {
+	        s.close();
+	    }
+	    return u;
+	}
+	@Override
+	public List<User> getAllUsers() {
+		String hql="from User";
+		try{Session s=factory.openSession();
+		s.createQuery(null);
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+		return null;
+	}
+	@Override
+	public User getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateUser(User dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delteUser(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.db;
+
+import java.sql.Connection;
+
+public class ConnectionProvider {
+	private static Connection cononection;
+	
+	
+	private ConnectionProvider() {
+		
+	}
+	public static Connection getConnectionProvider() {
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return cononection;
+		
+	}
+
+}

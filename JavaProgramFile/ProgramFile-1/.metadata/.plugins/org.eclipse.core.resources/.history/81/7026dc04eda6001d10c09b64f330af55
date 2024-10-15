@@ -1,0 +1,17 @@
+package ecp;
+
+	public  class Test12{
+		public static void main(String arg[]) {
+		try {
+			int x=10/0;
+			System.out.println("try");
+		}
+		catch (Exception e) {
+			System.out.println("catch");
+		}
+		finally {
+			System.out.println("finally");
+		}
+		}
+	}
+

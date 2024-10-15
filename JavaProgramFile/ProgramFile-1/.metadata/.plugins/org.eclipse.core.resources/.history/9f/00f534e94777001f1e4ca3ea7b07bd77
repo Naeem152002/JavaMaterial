@@ -1,0 +1,43 @@
+package inf;
+interface III1{
+	void m1(); 
+	
+}
+interface III2 extends III1{
+	void m2();
+}
+interface III extends III1,III2 {// multiple interface
+			int x=10;
+			void method();
+			void disp();
+			}
+
+public class Test implements III{
+
+	@Override
+	public void m1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void m2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void method() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void disp() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+

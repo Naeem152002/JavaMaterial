@@ -1,0 +1,33 @@
+package com.service.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.service.entities.Question;
+import com.service.repo.QuestionRepo;
+
+public class QuestionServiceImpl implements QuestionService {
+	
+	
+	@Autowired
+	private QuestionRepo questionRepo;
+
+	@Override
+	public Question createQuestion(Question question) {
+		return questionRepo.save(question);
+	}
+
+	@Override
+	public List<Question> getAllQuestion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Question getSingleQuestion(int questionId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+">
+<bean class="com.dependencyconstructor.Address" id="adr">
+<constructor-arg value="Hardoi"></constructor-arg>
+<constructor-arg value="UP"></constructor-arg>
+<constructor-arg value="India"></constructor-arg>
+</bean>
+<bean class="com.dependencyconstructor.Employee" id="emp">
+<constructor-arg  value="Naeem"></constructor-arg>
+<constructor-arg>
+<ref bean="adr"/>
+
+</constructor-arg>
+
+</bean>
+
+
+
+</beans>

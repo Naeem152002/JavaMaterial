@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.entities.Question" table="emp345">
+<id name="qid">
+<generator class="increment"></generator>
+</id>
+
+<property name="qname"></property>
+<bag name="answers" cascade="all">
+<key column="qid"></key>
+<one-to-many class="com.entities.Answer"></one-to-many>
+</bag>
+<set name="examples" cascade="all">
+<key column="qid"></key>
+<one-to-many class="com.entities.Example"></one-to-many>
+</set>
+<map name="qa" cascade="all">
+<key column="qid"></key>
+<index column="type" type="string"></index>
+<one-to-many class="com.entities.QA"></one-to-many>
+</map>
+
+</class>
+
+
+<class name="com.entities.Answer">
+<id name="aid">
+<generator class="increment"></generator>
+</id>
+<property name="answerName"></property>
+
+</class>
+<class name="com.entities.Example">
+<id name="eid">
+<generator class="increment"></generator>
+</id>
+<property name="exampleName"></property>
+
+</class>
+<class name="com.entities.QA">
+<id name="qaid">
+<generator class="increment"></generator>
+</id>
+<property name="qaName"></property>
+
+</class>
+
+
+
+
+
+</hibernate-mapping>

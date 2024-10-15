@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="menu-bar">
+
+<ul>
+<li class="active"><a href="Home.html">Home</a> </li>
+<li><a href="ManProduct.html">Man</a> </li>
+<li><a href="#">Women</a></li>
+<li><a href="#">Kids</a></li>
+<li><a href="AboutUs.html">About  Us</a></li>
+<li><a href="ContectUs.html">Contect Us</a></li>
+<li><a href="Register.html">Register</a></li>
+<li><a href="HogIn.html">LogIn/SignUp</a></li>
+</div>
+</body>
+</html>

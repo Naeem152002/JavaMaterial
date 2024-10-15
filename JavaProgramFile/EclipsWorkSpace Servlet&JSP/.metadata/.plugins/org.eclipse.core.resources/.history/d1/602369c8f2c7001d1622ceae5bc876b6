@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib version="2.1"
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd" >
+ 
+
+
+
+<tlib-version>1.0</tlib-version>
+<jsp-version>2.2</jsp-version>
+<short-name>EFT JSP Helpers</short-name>
+
+<tag>
+<name>sum </name>
+<tagclass>mypack.MyTagHendler</tagclass>
+<attribute>
+<name>num1</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>num2</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+ </tag>
+</taglib>

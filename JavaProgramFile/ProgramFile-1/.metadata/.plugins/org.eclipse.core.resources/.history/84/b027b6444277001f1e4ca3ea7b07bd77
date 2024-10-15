@@ -1,0 +1,22 @@
+package com.thread.practice;
+
+interface I{
+	void show();
+}
+
+public class Test1 {
+	public static void main(String[]args) {
+		
+		I i=new I() {
+
+			@Override
+			public void show() {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		};
+		
+	}
+
+}

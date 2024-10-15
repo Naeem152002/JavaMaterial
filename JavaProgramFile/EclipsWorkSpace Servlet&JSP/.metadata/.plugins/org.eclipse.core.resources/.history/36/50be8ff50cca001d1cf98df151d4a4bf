@@ -1,0 +1,30 @@
+package mypack;
+
+import java.io.File;
+
+public class FileClassDemo {
+
+	public static void main(String[] args) 
+	{
+
+		File fi=new File("C:\\Users\\Akash\\Desktop\\JavaNotes\\New folder\\New folder");
+		System.out.println(fi.getAbsolutePath());
+		System.out.println(fi.lastModified());
+		System.out.println(fi.exists());
+		System.out.println(fi.canRead());
+		
+		File fi2=new File("C:\\Users\\Akash\\Desktop\\JavaNotes\\New folder\\New folder\\Akash");
+		
+		if(!fi.exists())
+		{
+			fi.mkdir();
+		}
+		else
+		{
+			System.out.println("File Exist");
+		}
+		
+		
+	}
+
+}

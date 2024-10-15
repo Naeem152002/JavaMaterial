@@ -1,0 +1,59 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.db.ConnectionProvider;
+import com.dto.User;
+
+public class UserDaoImpl  implements UserDao {
+	Connection con=ConnectionProvider.getConnectionProvider();
+	@Override
+	public boolean insert(User dto) {
+		String sql="insert into user21(name,email,password,mobile)values(?,?,?,?)";
+		try {
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1,dto.getName());
+			ps.setString(2,dto.getEmail());
+			ps.setString(3,dto.getMobile());
+			ps.setString(4,dto.getPassword());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return true;
+	}
+
+	@Override
+	public User getByEmailAndName(User dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateUser(User dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteUser(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

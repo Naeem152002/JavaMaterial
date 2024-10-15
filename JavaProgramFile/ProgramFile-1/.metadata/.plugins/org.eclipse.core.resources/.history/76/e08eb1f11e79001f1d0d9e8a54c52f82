@@ -1,0 +1,19 @@
+package com.arraylists;
+
+import java.util.ArrayList;
+
+public class Test3 {
+	
+	public static void show(ArrayList<Integer>list) {
+		
+	}
+	public static void main(String[]args) {
+		ArrayList<Integer>list=new ArrayList<Integer>();
+		list.add(56);
+		list.add(89);
+		list.add(36);
+		list.add(45);
+		list.add(88);
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.exservices;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(url="http://localhost:8085", value="HOTEL-SERVICE")
+public interface HotelClient {
+
+}

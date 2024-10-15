@@ -1,0 +1,20 @@
+package com.dto;
+
+import lombok.Data;
+
+@Data
+public class User {
+	public User() {
+		super();
+	}
+	public User(String name, String email, String password, String mobile) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.mobile = mobile;
+	}
+	private int id;
+	private String name,email,password,mobile;
+
+}

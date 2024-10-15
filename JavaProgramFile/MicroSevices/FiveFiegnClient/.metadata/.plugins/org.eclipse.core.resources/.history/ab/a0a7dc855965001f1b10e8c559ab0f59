@@ -1,0 +1,8 @@
+package com.exservices;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(url="http://localhost:8086", value="RATING-SERVICE")
+public interface RatingClient {
+
+}

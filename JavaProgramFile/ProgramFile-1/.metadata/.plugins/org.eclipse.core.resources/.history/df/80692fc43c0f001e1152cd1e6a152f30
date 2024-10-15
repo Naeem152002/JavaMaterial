@@ -1,0 +1,14 @@
+// run method normal method ki tarah behave kr sakata hai
+public class Test5 extends Thread {
+	public void run() {
+		System.out.println("hi");
+	}
+
+	public static void main(String[] args) {
+		Test5 t= new Test5();
+		t.run();
+		// TODO Auto-generated method stub
+
+	}
+
+}

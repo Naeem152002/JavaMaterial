@@ -1,0 +1,51 @@
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class ManProduct extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String product[]=request.getParameterValues("mproduct");
+		out.println(product);
+		if(product==null)
+		{
+		out.println("<br>No option Selected");
+		}
+		else
+		{
+		int i=0;
+		for(String s:product)
+		{
+		Cookie ck=new Cookie("n"+i,s);
+		ck.setMaxAge(10);
+		response.addCookie(ck);
+		i++;
+		}
+		}
+		/*
+		 * String mp1=request.getParameter("mproduct"); String
+		 * mp2=request.getParameter("mproduct"); String
+		 * mp3=request.getParameter("mproduct"); String
+		 * mp4=request.getParameter("mproduct"); String
+		 * mp5=request.getParameter("mproduct");
+		 * 
+		 * response.setContentType("text/html"); PrintWriter
+		 * printWriter=response.getWriter(); printWriter.println(mp1);
+		 * printWriter.println(mp2); printWriter.println( mp3);
+		 * printWriter.println(mp4); printWriter.println(mp5);
+		 */
+	
+	}
+
+}

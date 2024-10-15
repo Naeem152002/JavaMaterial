@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\SpringJdbcTemplateCrudOperationJsp"/>
+			<item value="C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\SecondHibernateAnnotation\src\main\java\com\main\Main.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.hibernatetemplate.SpringHibernateTempalateCrudOperation"/>
+			<item value="com.jdbc.JdbcCrudOperationJsp"/>
+			<item value="com.jdbctemplate.SpringJdbcTemplateMapperCrudOperation"/>
+			<item value="com.jdbctemplate.SpringJdbcTemplateCrudOperation"/>
+			<item value="com.jdbctemplate.SpringJdbcTemplateMapperJsp"/>
+			<item value="com.jdbctemplate.SpringJdbcTemplateCrudOperationJsp"/>
+			<item value="com.secondframework.SecondSpringFramework"/>
+			<item value="com.springframework.FirstSpringFrameworkAplication"/>
+			<item value="com.joinmapcallection.HibernateJoinMapCollection"/>
+			<item value="com.tableperhirerchywithoutannotation.TablePerHirechywithoutannotation"/>
+			<item value="com.thirdcrudoperation.ThirdCrudOperation"/>
+			<item value="com.secondhibernate.SecondHibernateAnnotation"/>
+		</list>
+		<list key="groupId">
+			<item value="com.hibernatetemplate"/>
+			<item value="com.jdbc"/>
+			<item value="com.jdbctemplate"/>
+			<item value="com.secondframework"/>
+			<item value="com.springframework"/>
+			<item value="com.joinmapcallection"/>
+			<item value="com.tableperhirerchywithoutannotation"/>
+			<item value="com.thirdcrudoperation"/>
+			<item value="com.secondhibernate"/>
+		</list>
+		<list key="artifactId">
+			<item value="SpringHibernateTempalateCrudOperation"/>
+			<item value="JdbcCrudOperationJsp"/>
+			<item value="SpringJdbcTemplateMapperCrudOperation"/>
+			<item value="SpringJdbcTemplateCrudOperation"/>
+			<item value="SpringJdbcTemplateMapperJsp"/>
+			<item value="SpringJdbcTemplateCrudOperationJsp"/>
+			<item value="SecondSpringFramework"/>
+			<item value="FirstSpringFrameworkAplication"/>
+			<item value="HibernateJoinMapCollection"/>
+			<item value="TablePerHirechywithoutannotation"/>
+			<item value="ThirdCrudOperation"/>
+			<item value="SecondHibernateAnnotation"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

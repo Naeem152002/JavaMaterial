@@ -1,0 +1,56 @@
+package com.interthreadcommunication;
+class PrintTable{
+	public synchronized void table(int x) {
+		for(int i=1;i<=6;i++) {
+			System.out.println(Thread.currentThread().getName()+x*i);
+		}
+	}
+	
+}
+class D extends Thread{
+	PrintTable t;
+	D(PrintTable t){
+		this.t=t;
+	}
+	@Override
+	public void run() {
+		t.table(2);
+	}
+}
+class E extends Thread{
+	PrintTable t;
+	E(PrintTable t){
+		this.t=t;
+	}
+	@Override
+	public void run() {
+		t.table(4);
+	}
+}
+class F extends Thread{
+	
+	PrintTable t;
+	F(PrintTable t){
+		this.t=t;
+	}
+	@Override
+	public void run() {
+		t.table(6);
+	}
+}
+
+public class Test3 {
+	public static void main(String[]args) {
+		PrintTable t=new PrintTable();
+		
+		Thread t1=new Thread(new D(t),"one");
+		t1.start();
+		Thread t2=new Thread(new E(t),"Two");
+		t2.start();
+		
+		Thread t3=new Thread(new F(t),"Third");
+		t3.start();
+		
+	}
+
+}

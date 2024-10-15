@@ -1,0 +1,17 @@
+package inputoutput;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class PrintStreamDemo3 {
+
+	public static void main(String[] args)throws IOException {
+		// TODO Auto-generated method stub
+//int a=System.in.read();
+System.out.println("enter your name");
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+System.out.println("enter your name");
+	}
+
+}

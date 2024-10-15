@@ -1,0 +1,22 @@
+package com.entities;
+
+import java.util.List;
+
+import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Quiz {
+	
+	private int quizId;
+	private String quizTitle;
+	
+	@Transient
+	private List<Question>questions;
+	
+
+}

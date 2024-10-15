@@ -1,0 +1,333 @@
+import java.util.Scanner;
+import java.lang.Math;
+import java.util.regex.*;   
+import java.util.ArrayList;
+//import java.util.List;
+
+class Bank{
+
+	String bank_name;
+	String name;
+	String email;
+	String mobile;
+	String ifsc;
+	String accounttype;
+	int pin;
+	int amount;
+	int accountno;
+		
+	public static void main(String aa[]){
+	
+		boolean choice=true;
+		Bank b1 = new Bank();
+		Bank b2 = new Bank();
+		while(choice){
+			
+			System.out.println("\n--Choose the folling operations--\n");
+			System.out.println("1. To login");
+			System.out.println("2. Create account");
+			Scanner sc = new Scanner(System.in);
+			int operation =sc.nextInt();
+			int pass;
+			
+			switch(operation){
+			
+				case 1: System.out.println("\nWelcome to Bank");
+						System.out.println("Login with your 6 digit pin no");
+						pass=sc.nextInt();
+						
+						if(b1.pin==pass){
+							
+							System.out.println("!! Login Successfull !!");
+							boolean option = true;
+							
+							while(option){
+								System.out.println("\n1. Logout");
+								System.out.println("2. My Account Detail");
+								System.out.println("3. Account Activity");
+								System.out.println("4. Fund Transfer");
+								System.out.println("5. Withdraw");
+								System.out.println("6. Change Pin\n");
+								
+								int choose_operation = sc.nextInt();
+								switch(choose_operation){
+									case 1:	System.out.println("Logout Successfully\n");
+											option = false;
+											break;
+											
+									case 2:	b1.showinfo();
+											break;
+											
+									//case 3:	b1.activity();
+										//	break;
+									case 4: System.out.println("Enter amount want to tranfer\n");
+											int tempamount = sc.nextInt();
+											if(tempamount> b1.amount){
+												System.out.println("You do not have sufficinet amount to transfer \n");
+											}
+											else{
+												b1.amount = b1.amount - tempamount;
+												b2.amount = b2.amount + tempamount;
+											}
+											break;
+											
+									case 5: System.out.println("Enter amount want to withdraw");
+											tempamount = sc.nextInt();
+											if(tempamount> b1.amount){
+												System.out.println("You do not have sufficinet amount to withdraw \n");
+											}
+											else{
+												b1.amount = b1.amount - tempamount;
+											}
+											break;
+											
+									case 6: System.out.println("Enter new pin want to change\n");
+											b1.changepin();
+											System.out.println("Pin change Successfully");
+											break;
+											
+									default: System.out.println("Error: Please choose valid opeation\n\n");
+								}
+							}
+						}
+						else if(b2.pin==pass){
+							
+							System.out.println("!! Login Successfull !!");
+							boolean option = true;
+							
+							while(option){
+								System.out.println("\n1. Logout");
+								System.out.println("2. My Account Detail");
+								System.out.println("3. Account Activity");
+								System.out.println("4. Fund Transfer");
+								System.out.println("5. Withdraw");
+								System.out.println("6. Change Pin\n");
+								
+								int choose_operation = sc.nextInt();
+								switch(choose_operation){
+									case 1:	System.out.println("Logout Successfully\n");
+											option = false;
+											break;
+											
+									case 2:	b2.showinfo();
+											break;
+											
+									//case 3:	b1.activity();
+										//	break;
+									case 4: System.out.println("Enter amount want to tranfer\n");
+											int tempamount = sc.nextInt();
+											if(tempamount> b2.amount){
+												System.out.println("You do not have sufficinet amount to transfer \n");
+											}
+											else{
+												b2.amount = b2.amount - tempamount;
+												b1.amount = b1.amount + tempamount;
+											}
+											break;
+											
+									case 5: System.out.println("Enter amount want to withdraw");
+											tempamount = sc.nextInt();
+											if(tempamount> b2.amount){
+												System.out.println("You do not have sufficinet amount to withdraw \n");
+											}
+											else{
+												b2.amount = b2.amount - tempamount;
+											}
+											break;
+											
+									case 6: System.out.println("Enter new pin want to change\n");
+											b2.changepin();
+											System.out.println("Pin change Successfully");
+											break;
+											
+									default: System.out.println("Error: Please choose valid opeation\n\n");
+								}
+							}
+						}
+						else if(b1.pin==0 && b2.pin==0){
+							System.out.println("Error: No user exist Please create account\n");
+						}
+						else{
+							System.out.println("Error: Enter Valid pin\n");
+						}
+						//System.out.println("No user exist Please create account");
+						break;
+					
+				case 2: if(b1.pin==0){
+							b1.create_account();
+							b1.showinfo();
+						}
+						else if(b2.pin==0){
+							b2.create_account();
+							b2.showinfo();
+						}
+						else{
+							System.out.println("Error: Cannot create more then two users\n\n");
+						}
+					    break;
+				
+				default: System.out.println("Error: Please choose valid opeation\n\n");
+			}
+		}
+	}
+	
+	
+	void showinfo(){
+			//Bank b1 = new Bank();
+			System.out.println("\n!!--Account Detail--!!");
+			System.out.println("!!~ Bank Name => "+bank_name);
+			System.out.println("!!~ Account Name => "+name);
+			System.out.println("!!~ Account Email => "+email);
+			System.out.println("!!~ Mobile Number => "+mobile);
+			System.out.println("!!~ Account Number => "+accountno);
+			System.out.println("!!~ Account Balance => "+amount);
+			System.out.println("!!~ Account Type => "+accounttype);
+			System.out.println("!!~ IFSC Code => "+ifsc);
+			System.out.println("!!~ Account Pin => "+pin);
+			System.out.println("-----------*******-------------\n");
+	}
+	
+	void create_account(){
+		
+		boolean check=true;
+		//int i=0;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("\n-------- Fill details to continue --------");
+		System.out.println("==| Eneter Bank Name |==");
+		
+		while(check){
+			bank_name = sc.next();
+			if(isAlpha(bank_name)){
+				break;
+			}
+			else{
+				System.out.println("Error: Only Alphabate allowed in Bank Name");
+			}
+		}
+		
+		
+		//Account Holder Name 
+		System.out.println("==| Full Name |==");
+		while(check){
+			name = sc.next();
+			if(isAlpha(name)){
+				break;
+			}
+			else{
+				System.out.println("Error: Only Alphabate allowed in Name");
+			}
+		}
+		
+		
+		//email check enter
+		System.out.println("==| Emial |==");
+		while(check){
+			ArrayList<String> emails = new ArrayList<String>();
+			String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}";  		
+			Pattern pattern = Pattern.compile(regex); 
+			email = sc.next();
+			Matcher matcher = pattern.matcher(email);  
+			if(matcher.matches()){
+				break;
+			}else{
+				System.out.println("Error: Please enter valid email");
+			}
+		}
+		
+		
+		System.out.println("==| Mobile Number |==");
+		while(check){
+			mobile = sc.next();
+			if(mobile.length()>=10 && mobile.length()<=10){
+				break;
+			}
+			else{
+				System.out.println("Error: Mobile name must be equqal to 10 digit");
+			}
+		}
+		
+		
+		System.out.println("==| Ifsc Code |==");
+		while(check){
+			ifsc = sc.next();
+			if(ifsc.length()>=10 && ifsc.length()<=10 && isAlphaNumeric(ifsc)){
+				break;
+			}
+			else{
+				System.out.println("Error: ifsc name must be Alpha Numeric equqal to 10 digit ");
+			}
+		}
+		
+		
+		System.out.println("==|  Select Account Type  |==");
+		System.out.println("1.Saving");
+		System.out.println("2.Current");
+		accounttype = sc.next();
+		
+		System.out.println("==|  Enter Amount You want to Save  |==");
+		amount = sc.nextInt();
+		
+		
+		//Enter pin
+		System.out.println("==|  Create 6 Digit Pin  |==");
+		while(check){
+			pin = sc.nextInt();
+			String temp=Integer.toString(pin);
+			if(temp.length()>=6 && temp.length()<=6 && Numeric(temp)){
+				break;
+			}
+			else{
+				System.out.println("Error: pin code must be equal to 6 digit and numeric");
+			}
+		}
+		
+		System.out.println("==|  Generating 11 Digit Account Number  |==");
+		System.out.println("-----------*******-------------");
+		accountno=(int)(Math.random() * 1000000000);
+		System.out.println("-----------***[ Account Created Successfully ]***-------------\n\n");
+		//b1.showinfo();
+		
+	}
+	
+	
+	//check name should be alphabet
+	private static Pattern p = Pattern.compile("^[a-zA-Z]");
+	
+	public static boolean isAlpha(String s) {
+        return p.matcher(s).find();
+    }
+	
+	
+	//check ifsc name should be alpha numeric
+	private static Pattern p1 = Pattern.compile("^[a-zA-Z0-9]");
+	
+	public static boolean isAlphaNumeric(String s) {
+        return p1.matcher(s).find();
+    }
+	
+	//check pin should numeric
+	private static Pattern p2 = Pattern.compile("^[0-9]");
+	
+	public static boolean Numeric(String s) {
+        return p2.matcher(s).find();
+    }
+	
+	
+	void changepin(){
+		//Enter pin
+		boolean check=  true;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("==|  Create 6 Digit Pin  |==");
+		while(check){
+			pin = sc.nextInt();
+			String temp=Integer.toString(pin);
+			if(temp.length()>=6 && temp.length()<=6 && Numeric(temp)){
+				break;
+			}
+			else{
+				System.out.println("Error: pin code must be equal to 6 digit and numeric");
+			}
+		}
+	}
+}

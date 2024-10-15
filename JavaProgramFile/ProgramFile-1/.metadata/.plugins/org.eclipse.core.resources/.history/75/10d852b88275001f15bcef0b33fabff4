@@ -1,0 +1,10 @@
+package com.sorting;
+
+public class Test14 {
+	public static void pairArray(int a[]) {
+		
+	}
+public static void main(String[]args) {
+	
+}
+}

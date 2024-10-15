@@ -1,0 +1,29 @@
+package com.hashmap;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class TestHashSet {
+
+	public static void main(String[] args) 
+	{
+	
+		HashMap set=new HashMap<>();
+//		//HashSet set=new HashSet<>(34);
+//		HashSet set=new HashSet<>(45,0.97f);
+//		
+//		HashSet set2=new HashSet<>(set1);
+//		
+
+		set.put("one", "rajesh");
+		
+//		set.add("two");
+//		set.add("three");
+//		set.add("four");
+//		set.add("five");
+//		set.add("six");
+//		set.add("seven");
+		
+	}
+
+}

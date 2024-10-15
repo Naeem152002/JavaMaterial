@@ -1,0 +1,10 @@
+package Pack1;
+
+import java.sql.Connection;
+
+public class dbConnection
+{
+static Connection connection=null;
+
+public 
+}

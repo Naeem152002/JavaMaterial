@@ -1,0 +1,18 @@
+package com.service;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.entities.Question;
+
+
+public interface QuestionClient {
+	
+	@GetMapping("/quiz/{quizId}")
+	public List<Question> findByQuizId(@PathVariable int quizId) ;
+		
+	
+
+}

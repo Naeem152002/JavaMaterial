@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xls="http://www.w3.org/2001/XMLSchema-instance"
+xls:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.setter.Question" id="questions">
+<property name="id" value="1"></property>
+<property name="quName" value="How are you"></property>
+
+</bean>
+<bean class="com.setter.Answer" id="answers">
+<property name="ans" value="I am good"></property>
+
+</bean>
+<bean class="com.setter.Address" id="address">
+<property name="city" value="Hardoi"></property>
+<property name="state" value="UP"></property>
+<property name="country" value="India"></property>
+
+</bean>
+<bean class="com.setter.Employee" id="employee">
+<property name="id" value="1"></property>
+<property name="name" value="NaeemQureshi"></property>
+<property name="address">
+<list>
+<value>Agra</value>
+<value>Agra</value>
+</list>
+</property>
+<property name="addres">
+<list>
+<ref bean="address"></ref>
+</list>
+</property>
+<property name="addr">
+<set>
+<value>Hardoi</value>
+<value>Hardoi</value>
+<value>Delhi</value>
+</set>
+</property>
+<property name="add">
+<set>
+<ref bean="address"></ref>
+</set>
+</property>
+<property name="quAs">
+<map>
+<entry key="what is java" value="java is programming languange"></entry>
+</map>
+</property>
+<property name="qa">
+<map>
+<entry key-ref="questions" value-ref="answers"></entry>
+
+</map>
+
+</property>
+
+
+
+
+</bean>
+
+
+
+
+</beans>

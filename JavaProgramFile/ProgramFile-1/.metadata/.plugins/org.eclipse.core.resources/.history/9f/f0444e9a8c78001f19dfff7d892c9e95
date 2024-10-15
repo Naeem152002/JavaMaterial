@@ -1,0 +1,15 @@
+package com.arrays;
+
+public class Test13 {
+	public static int buySellStocks(int a[]) {
+		return 0;
+	}
+	
+	
+	public static void main(String[]args) {
+		int a[]= {4,2,0,6,3,2,5};
+		System.out.println(buySellStocks(a));
+		
+	}
+
+}

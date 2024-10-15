@@ -1,0 +1,12 @@
+package com.arrays;
+
+public class Test5 {
+	public static void pairsArray(int a[]) {
+		
+	}
+	
+	public static void main(String[]args) {
+		int a[]= {2,3,5,10,34,25};
+		pairsArray(a);
+}
+}

@@ -1,0 +1,18 @@
+package com.string;
+
+/*Given a route containing 4 directions (E,W,N,S);find the shortest path to reach destination
+ * "WNEENESENNN"
+*/
+public class Test1 {
+	public static int shortestPath(String path) {
+		return 0;
+	}
+	
+	public static void main(String[]args) {
+		
+		String s="WNEENESENNN";
+		shortestPath(s);
+		
+	}
+
+}

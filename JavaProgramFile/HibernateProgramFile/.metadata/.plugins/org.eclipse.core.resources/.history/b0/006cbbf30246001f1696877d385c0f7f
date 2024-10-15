@@ -1,0 +1,43 @@
+package com.dao;
+
+import com.dto.User;
+
+public class UserDaoImpl implements UserDao {
+
+	@Override
+	public boolean insert(User dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public User getByEmailAndName(User dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateUser(User dto) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delteUser(int id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

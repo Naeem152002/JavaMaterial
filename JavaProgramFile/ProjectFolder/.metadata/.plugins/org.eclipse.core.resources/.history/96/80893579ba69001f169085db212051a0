@@ -1,0 +1,10 @@
+package com.phegondev.PhegonHotel.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.phegondev.PhegonHotel.service.interfac.IRoomService;
+
+@Service
+public class RoomService2 implements IRoomService {
+
+}

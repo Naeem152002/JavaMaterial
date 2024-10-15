@@ -1,0 +1,21 @@
+INDEX VERSION 1.134
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\624787424.index
+\ThirdCrudOperation\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2414175037.index
+\SpringJdbcTemplateCrudOperationJsp\src\main\java
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3038167321.index
+\JdbcCrudOperationJsp\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1524016283.index
+\FirstHIbernateProject\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3322149675.index
+\SecondHibernateAnnotation\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\758561496.index
+\TablePerConcreteClasswithoutannotaion\src\main\java
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3172625291.index
+\SpringJdbcTemplateMapperCrudOperation\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1566226682.index
+\FirstHibernateProject\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2916834355.index
+\SpringJdbcTemplateCrudOperation\src\main\resources
+C:\Users\naeem\OneDrive\Desktop\JavaNotes\JavaProgramFile\FrameworkPractice\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1883825586.index
+\SpringHibernateTempalateCrudOperation\src\main\resources

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.bean.Person" table="ABC3" >
+<id name="id" >
+<generator class="increment"></generator>
+</id>
+<property name="name"></property>
+<joined-subclass name="com.bean.Student" >
+<key column="studentId"></key>
+<property name="course"></property>
+<property name="fees"></property>
+</joined-subclass>
+<joined-subclass name="com.bean.Employee" >
+<key column="employeeId"></key>
+<property name="job"></property>
+<property name="salary"></property>
+</joined-subclass>
+</class>
+</hibernate-mapping>

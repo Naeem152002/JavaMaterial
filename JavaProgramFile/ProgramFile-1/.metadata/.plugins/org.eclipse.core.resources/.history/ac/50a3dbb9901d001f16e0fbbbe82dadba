@@ -1,0 +1,17 @@
+package com.serilizable;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class Main {
+	
+	Student s1=new Student(1,"Naeem","naeem@gmail.com","Hardoi");
+	Student s2=new Student(2,"Gufran","gurfran@gmail.com","Vanaras");
+	Student s3=new Student(3,"Rehan","rehan@gmail.com","Kanpur");
+	
+	
+	FileOutputStream fos=new FileOutputStream("ob.txt");
+	
+	ObjectOutputStream oss=new ObjectOutputStream(fos);
+
+}

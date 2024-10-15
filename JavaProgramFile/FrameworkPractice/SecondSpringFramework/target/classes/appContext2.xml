@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+xmlns:xls="http://www.w3.org/2001/XMLSchema-instance"
+xls:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.byconcollandcollect2.Question" id="question">
+<constructor-arg value="1"></constructor-arg>
+<constructor-arg value="what is your Name"></constructor-arg>
+</bean>
+<bean class="com.byconcollandcollect2.Answer" id="answer">
+<constructor-arg value="Khalid Khan"></constructor-arg>
+
+</bean>
+
+
+<bean class="com.byconcollandcollect2.Address" id="address">
+<constructor-arg value="Hardoi"></constructor-arg>
+<constructor-arg value="UP"></constructor-arg>
+<constructor-arg value="India"></constructor-arg>
+</bean>
+
+
+<bean class="com.byconcollandcollect2.Employee" id="emp">
+
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="Naeem Qureshi"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="address"/>
+</list>
+</constructor-arg>
+<constructor-arg >
+<list>
+<value>Agra</value>
+</list>
+</constructor-arg>
+<constructor-arg>
+<set>
+<value>Hardoi</value>
+<value>Hardoi</value>
+<value>Delhi</value>
+</set>
+</constructor-arg>
+<constructor-arg>
+<set>
+<ref bean="address"></ref>
+</set>
+</constructor-arg>
+<constructor-arg>
+<map>
+<entry key="What is java" value="java is programming languange"></entry>
+<entry key="what is C++" value="it is oops support"></entry>
+</map>
+
+</constructor-arg>
+<constructor-arg>
+<map>
+<entry key-ref="question" value-ref="answer"></entry>
+
+</map>
+
+</constructor-arg>
+</bean>
+
+
+</beans>

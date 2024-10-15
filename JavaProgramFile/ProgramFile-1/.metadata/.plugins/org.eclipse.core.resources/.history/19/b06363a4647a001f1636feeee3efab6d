@@ -1,0 +1,7 @@
+package com.jdbc.practices;
+
+public class User {
+	private int id;
+	private String name,email,password,mobile;
+
+}

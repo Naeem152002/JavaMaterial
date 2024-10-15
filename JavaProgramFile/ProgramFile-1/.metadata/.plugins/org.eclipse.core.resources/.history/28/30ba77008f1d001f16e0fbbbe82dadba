@@ -1,0 +1,43 @@
+package com.serilizable;
+
+public class Student {
+	private String nae,email,address;
+	private int age;
+	public Student(String nane, String email, String address, int age) {
+		super();
+		this.namne = nane;
+		this.email = email;
+		this.address = address;
+		this.age = age;
+	}
+	public String getNane() {
+		return nane;
+	}
+	public void setNane(String nane) {
+		this.nane = nane;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

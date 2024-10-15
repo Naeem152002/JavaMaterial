@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
+    <%@ page import="org.springframework.context.ApplicationContext" %>
+    <%@ page import="com.dao.UserDao" %>
+    <%@ page import="com.dto.User" %>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Password</th>
+<th>Mobile</th>
+</tr>
+<%
+ApplicationContext app=new ClassPathXmlApplicationContext("appContext.xml");
+UserDao dao=(UserDao)app.getBean("dao");
+List<User>users=dao.getAllUsers();
+
+
+
+
+%>
+
+
+
+
+
+
+</table>
+</body>
+</html>

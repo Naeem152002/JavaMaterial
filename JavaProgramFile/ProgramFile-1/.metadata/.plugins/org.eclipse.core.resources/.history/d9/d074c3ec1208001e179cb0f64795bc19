@@ -1,0 +1,20 @@
+
+     class Test1 {
+			 D getObject () {
+				 D b=new D();
+				return new D();// anomeyous object
+			}
+			public static void main(String arg []) {
+				Test1 t =new Test1 ();
+				System.out.println(t.getObject ());
+			}
+	}
+	class D
+	{
+	D(){
+		System.out.println("B constructor....");
+	}
+	}
+	
+
+

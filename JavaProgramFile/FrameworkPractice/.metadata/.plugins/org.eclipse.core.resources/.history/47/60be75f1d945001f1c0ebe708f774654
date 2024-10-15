@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="com.dao.*" %>
+    <%@ page import="com.dto.User" %>
+    <%@ page import="java.util.List" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style >
+.size{
+font-size:20px; 
+}
+</style>
+</head>
+<body>
+<table border="1" class="size">
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Password</th>
+<th>Mobile</th>
+<th>Action</th>
+</tr>
+<%
+UserDao dao=new UserDaoImpl();
+List<User>users=dao.getAllUsers();
+
+
+
+%>
+
+
+
+
+
+</table>
+</body>
+</html>

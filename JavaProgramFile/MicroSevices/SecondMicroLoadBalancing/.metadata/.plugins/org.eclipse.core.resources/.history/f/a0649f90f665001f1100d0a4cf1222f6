@@ -1,0 +1,12 @@
+spring.application.name=Question-Service
+spirng.datasource.name=com.msyql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/micro
+spring.datasource.username=root
+spring.datasource.password=1234
+spring.jpa.hibernate.ddl-auto=update
+server.port=8085
+
+eureka.instance.prefer-ip-address=true
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+eureka.client.serviceUrl.defaultZone=${EUREKA_URI:http://localhost:8181/eureka}

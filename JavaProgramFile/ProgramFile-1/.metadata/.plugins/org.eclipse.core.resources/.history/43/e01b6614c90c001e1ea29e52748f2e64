@@ -1,0 +1,14 @@
+package ecp;
+
+import java.io.IOException;
+
+public class Test18 {
+public static void main(String agrs[])throws IOException {
+	System.in.read();
+	/*try {
+		System.in.read();// iske age throws laga hota ise handle karne ke liye try catch use karte  .
+	}catch(IOException e) {// ya fir throws IOException lagao
+		e.printStackTrace();
+	}*/
+}
+}

@@ -1,0 +1,25 @@
+package com.services;
+
+import java.util.List;
+
+import com.dto.UserDto;
+import com.entities.User;
+
+public interface UserService {
+	
+	
+	UserDto saveUser(UserDto userDto);
+	UserDto updateUser(UserDto userDto,int userId);
+	
+	void deleteUser(int userId);
+	
+	
+	UserDto getSingleUser(int userId);
+	
+	List<User>getAllUsers();
+	
+	
+	
+	
+
+}

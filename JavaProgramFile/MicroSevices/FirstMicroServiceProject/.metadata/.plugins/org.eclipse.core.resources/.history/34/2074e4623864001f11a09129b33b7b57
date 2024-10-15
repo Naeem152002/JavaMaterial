@@ -1,0 +1,22 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import com.example.demo.dto.QuestionDto;
+import com.example.demo.entities.Question;
+
+public interface QuestionService {
+	
+	
+	QuestionDto create(QuestionDto questionDto);
+	
+	
+	List<QuestionDto>getAllQuestions();
+	
+	Question getOne(Long id);
+	
+	
+	List<Question>getQuestionsOfQuiz(Long quizId);
+	
+
+}

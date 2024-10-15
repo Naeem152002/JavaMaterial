@@ -1,0 +1,1 @@
+insert into data values(?,?,?,?)/delete from data where email=? and password=?/select * from data where email=? and password=?/

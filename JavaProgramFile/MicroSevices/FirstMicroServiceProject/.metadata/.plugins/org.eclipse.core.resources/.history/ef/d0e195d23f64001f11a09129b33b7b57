@@ -1,0 +1,19 @@
+package com.example.demo.exceptions;
+
+import org.apache.hc.core5.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.example.demo.response.ApiResponse;
+
+@RestControllerAdvice
+public class GlobalException {
+	
+	public ResponseEntity<ApiResponse>handleException(RuntimeException ex){
+		String fieldName=ex.getMessage();
+	ApiResponse apiResponse=new ApiResponse(message,false);
+		
+		return new ResponseEntity<ApiResponse>(apiResponse,HttpStatus.NOT_FOUND);
+	}
+
+}

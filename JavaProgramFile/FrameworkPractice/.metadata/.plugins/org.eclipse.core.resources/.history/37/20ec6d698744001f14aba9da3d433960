@@ -1,0 +1,16 @@
+package com.dao;
+
+import java.util.List;
+
+import com.dto.User;
+
+public interface UserDao  {
+	public boolean insert(User dto);
+	public User getByEmailandName(User dto);
+	public List<User>getUser();
+	public User getBYId(User dto);
+	public boolean updateUser(User dto);
+	public boolean deleteUser(int id);
+	
+
+}

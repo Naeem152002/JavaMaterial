@@ -1,0 +1,15 @@
+package mypack;
+
+import java.io.File;
+
+public class FileClassDemo {
+
+	public static void main(String[] args) 
+	{
+
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,105 @@
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import bean.UserBean;
+import connection.ConnectionProvider;
+import dao.UserDao;
+import dao.UserImpl;
+
+
+public class Register extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String name=request.getParameter("name");
+		String email=request.getParameter("email");
+		String password=request.getParameter("password");
+		String mobile=request.getParameter("mobile");
+		String gender=request.getParameter("gender1");
+		String dob=request.getParameter("dob");
+		String state=request.getParameter("state");
+		String city=request.getParameter("city");
+		String address=request.getParameter("address");
+		
+		
+		
+		response.setContentType("text/html");
+		
+		PrintWriter pw=response.getWriter();
+		
+		pw.println(name);
+		pw.println(email);
+		pw.println(password);
+		pw.println(mobile);
+		pw.println(gender);
+		//pw.println(gender2);
+		pw.println(dob);
+	 	pw.println(state);
+		pw.println(city);
+		pw.println(address);
+		
+		Connection connection=ConnectionProvider.getConnection();
+		System.out.println(connection);
+		
+		
+		
+		UserBean userbean=new UserBean(email,name,password,mobile,gender,dob,state,city,address);
+		
+		UserDao dao=new UserImpl();
+		
+		//dao.registerUser(UserBean);
+		
+  UserBean userbean1 = userbean;
+	//  UserBean userbean1 = null;
+	String msg=dao.registerUser(userbean1);
+	   
+	    
+	    //PrintWriter printwriter=response.getWriter();
+	    pw.println(msg);
+		
+		
+		//Connection connection=DatabaseConnection.getcoConnection();
+		/*
+		 * try { String
+		 * sql="insert into register3(name,email,password,mobile,gender,dob,state,city,address)values(?,?,?,?,?,?,?,?,?)"
+		 * ; PreparedStatement Statement1=connection.prepareStatement(sql);
+		 * 
+		 * Statement1.setString(1, name); Statement1.setString(2, email);
+		 * Statement1.setString(3, password); Statement1.setString(4, mobile);
+		 * Statement1.setString(5, gender1); Statement1.setString(6, dob);
+		 * Statement1.setString(7, state); Statement1.setString(8, city);
+		 * Statement1.setString(9, address);
+		 * 
+		 * int i=Statement1.executeUpdate(); if(i>0) {
+		 * System.out.println("Record Sucessfully inserted");
+		 * 
+		 * 
+		 * } else { System.out.println("Record Not inserted"); } }
+		 * 
+		 * catch (Exception e) { e.printStackTrace();
+		 * 
+		 * }
+		 * 
+		 */
+		
+		
+//		System.out.println(name);
+//		System.out.println(email);
+//		System.out.println(password);
+//		System.out.println(mobile);
+//		System.out.println(dob);
+//		System.out.println(state);
+//		System.out.println(city);
+//		System.out.println(address);
+	}
+
+}

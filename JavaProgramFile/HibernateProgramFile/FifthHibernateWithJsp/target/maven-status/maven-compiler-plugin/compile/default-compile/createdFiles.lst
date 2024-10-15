@@ -1,0 +1,6 @@
+com\fifthhibernaewithjsp\dao\DeleteDao.class
+com\fifthhibernaewithjsp\dao\UserDao.class
+com\fifthhibernaewithjsp\dao\FetchDao.class
+com\fifthhibernaewithjsp\dao\EditDao.class
+com\fifthhibernaewithjsp\entities\User.class
+com\fifthhibernaewithjsp\factoryprovider\FactoryProvider.class

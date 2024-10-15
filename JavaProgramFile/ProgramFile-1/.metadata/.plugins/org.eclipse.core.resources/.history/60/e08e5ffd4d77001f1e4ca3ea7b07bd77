@@ -1,0 +1,25 @@
+package com.thread.practice;
+
+
+
+class A extends Thread{
+	@Override
+	public void run() {
+		System.out.println("how are you");
+	}
+	
+}
+class B extends Thread{
+	@Override
+	public void run() {
+		System.out.println("how are you");
+	}
+	
+}
+public class Test1 {
+	public static void main(String[]args) {
+		
+		
+	}
+
+}

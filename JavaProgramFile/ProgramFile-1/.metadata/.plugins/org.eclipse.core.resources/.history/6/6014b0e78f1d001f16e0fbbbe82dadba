@@ -1,0 +1,9 @@
+package com.serilizable;
+
+public class Main {
+	
+	Student s1=new Student(1,"Naeem","naeem@gmail.com","Hardoi");
+	Student s2=new Student(2,"Gufran","gurfran@gmail.com","Vanaras");
+	Student s3=new Student(3,"Rehan","rehan@gmail.com","Kanpur");
+
+}

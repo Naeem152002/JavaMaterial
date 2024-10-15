@@ -1,0 +1,59 @@
+package com.lcwd.hotel.service.services;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lcwd.hotel.service.dto.HotelDto;
+import com.lcwd.hotel.service.entities.Hotel;
+import com.lcwd.hotel.service.exceptions.ResourceNotFoundException;
+import com.lcwd.hotel.service.repositories.HotelRepo;
+
+@Service
+public class HotelServiceImpl implements HotelService {
+	
+	
+	@Autowired
+	private HotelRepo hotelRepo;
+	
+	@Autowired
+	 private ModelMapper modelMapper;
+
+	@Override
+	public HotelDto saveHotel(HotelDto hotelDto) {
+		this.hotelRepo.save(hotelDto);
+
+		return null;
+	}
+
+	@Override
+	public HotelDto updateHotel(HotelDto hotel,int hotelId) {
+		Hotel h=hotelRepo.findById(hotelId).orElseThrow(()->new ResourceNotFoundException("Hotel with given id is not found on server!!"+hotelId) );
+		h.setName(hotel.getName());
+		h.setLocation(hotel.getLocation());
+		h.setAbout(hotel.getAbout());
+		return  hotelRepo.save(h);
+	}
+
+	@Override
+	public void deleteHotel(int hotelId) {
+		Hotel h=hotelRepo.findById(hotelId).orElseThrow(()->new ResourceNotFoundException("Hotel with given id is not found on server!!"+hotelId) );
+		hotelRepo.delete(h);
+	}
+	
+	@Override
+	public Hotel getSingleHotel(int hotelId) {
+		Hotel hotel=hotelRepo.findById(hotelId).orElseThrow(()->new ResourceNotFoundException("Hotel with given id is not found on server!!"+hotelId) );
+	return hotel;
+	}
+
+	
+	@Override
+	public List<Hotel> getAllHotels() {
+		return hotelRepo.findAll();
+		
+	}
+
+}

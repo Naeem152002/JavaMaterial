@@ -1,0 +1,57 @@
+Assigenment:-
+
+Qus:-you have to create a class called "Bulb".In Bulb class you have to take the fallowing DataMember and MemberFunction:-
+
+ 
+Properties:-
+int watt;
+float price;
+String color;
+boolean state;
+int counter;
+String cname;
+
+Behaviour:-
+void showDetails()
+{}
+
+void changeState()
+{}
+
+void countBulb()
+{}
+
+void changeCompanayName()
+{}
+
+Condation:-
+1):-Here you have to decide that which data-member and member-function is static and which one is non-static.
+
+2):-Suppose you are creating the Bulb for "SURYA" companay.
+
+3):-Now it is my requirement that if we don't creating Bulb(Means don't creating the object of Bulb Class)so counter is initially assigned at loading time and if we call the countBulb method so it generet output that "o(zero) Bulb is created.."
+
+4):-Now you have to create the 3 same type of Bulb.And printing the details of each Bulb separetly 
+
+5):-If you create the 1st bulb object the counter is automatically invoked.And if you call the countBulb() method so it print total no of Bulb is 1 and if we create three Bulb object it print total no. of Bulb is 3. 
+
+6):-Now you have to create the 3 different type of Bulb.And printing its details.Then countBulb() method is again called by you and it print the total no of Bulb is 6
+
+7):-Now if suppose the Bulb have on(true) condation so you have the change the state of Bulb(if it is true so change is by false and if false so it change is to true) by calling ChangeState() method
+
+8):-Now suppoose if we want the companay name so you have to call the ChangeCompany() method and change the company name of Bulb is "Philipse".
+
+
+
+Note:-Addition attribute and functionally you may add.
+
+
+Note:-After compliting the assignment you submit it on my id named:-
+
+Email:-suryaassigen@gmail.com
+
+Mob:-9310683500 
+
+
+
+  

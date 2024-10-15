@@ -1,0 +1,21 @@
+package inf.practice;
+interface I{
+	void show();
+}
+interface I1{
+	void show();
+}
+
+
+public class Test implements I1{
+	public static void main(String[]args) {
+		
+	}
+
+	@Override
+	public void show() {
+		
+		
+	}
+
+}

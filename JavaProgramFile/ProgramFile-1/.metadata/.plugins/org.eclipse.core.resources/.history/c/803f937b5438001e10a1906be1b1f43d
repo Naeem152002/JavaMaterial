@@ -1,0 +1,10 @@
+
+public abstract  class Test2 {
+/*abstract int x=10; why run time polymorphisam only method 
+abstract final void show (); not ovverride and inherrite
+abstract private void show();
+abstract static void show ();
+abstract void show(){
+{ ye sab nahi ho sakte hai honge to error a jayega */ 
+
+}

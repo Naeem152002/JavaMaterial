@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xls="http://www.w3.org/2001/XMLSchema-instance"
+xls:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+<bean class="com.byinherit.Person" id="p">
+<property name="id" value="2"></property>
+<property name="name" value="Khalid Khan"></property>
+</bean>
+
+<bean class="com.byinherit.Employee" id="emp" parent="p">
+<property name="salary" value="738383.0"></property>
+
+
+</bean>
+
+<bean></bean>
+
+
+
+</beans>

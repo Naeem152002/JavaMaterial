@@ -1,0 +1,26 @@
+// parameterized cons: alag object per same data chaiye 
+class Test5 {
+	String name,color ;
+	int price ;
+	Test5() {
+		name="naeem";
+		color="white";
+		price=67;
+		
+	}
+	void disp() {
+		System.out.println(name);
+		System.out.println(color);
+		System.out.println(price);
+	}
+		public static void main(String[] args) {
+		Test5 t=new Test5();
+		Test5 t1= new Test5();
+		t1.disp();
+t.disp();
+		}
+	
+
+	
+}
+

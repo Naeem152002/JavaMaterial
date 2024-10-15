@@ -1,0 +1,14 @@
+//join method
+class ThreadTest1 extends Thread{
+	public void run() {
+		
+	}
+}
+
+
+
+
+public class Test5 {
+public static void main(String args []) {
+}
+}

@@ -1,0 +1,419 @@
+he[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder7
+[redhat@localhost ~]$ ls -ltr
+total 48
+drwxr-xr-x 3 redhat redhat 4096 Jul  5 23:23 Desktop
+drwxrwxr-x 2 redhat redhat 4096 Jul  5 23:25 folder1
+drwxrwxr-x 2 redhat redhat 4096 Jul  5 23:31 folder3
+drwxrwxr-x 2 redhat redhat 4096 Jul  5 23:32 folder7
+drwxrwxr-x 3 redhat redhat 4096 Jul  5 23:37 folder2
+drwxrwxr-x 2 redhat redhat 4096 Jul  5 23:37 folder4
+[redhat@localhost ~]$ cd folder3
+[redhat@localhost folder3]$ pwd
+/home/redhat/folder3
+[redhat@localhost folder3]$ cd ..
+[redhat@localhost ~]$ mkdir folder5
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder7
+[redhat@localhost ~]$ touch Desktop
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder7
+[redhat@localhost ~]$ touch folder1
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder7
+[redhat@localhost ~]$ touch folder6
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder6  folder7
+[redhat@localhost ~]$ cd folder1
+[redhat@localhost folder1]$ cat>file.txt
+hello world 
+hay 
+how are you 
+where are you from
+d
+[redhat@localhost folder1]$ cat file.txt
+hello world 
+hay 
+how are you 
+where are you from
+d
+[redhat@localhost folder1]$ cat>file1.txt
+naeem kuraishi
+jeeshan khan
+naeem
+[redhat@localhost folder1]$ cat file.txt file1.txt>file2.txt
+[redhat@localhost folder1]$ ls
+file1.txt  file2.txt  file.txt
+[redhat@localhost folder1]$ cat file2.txt
+hello world 
+hay 
+how are you 
+where are you from
+d
+naeem kuraishi
+jeeshan khan
+naeem
+[redhat@localhost folder1]$ mv file2.txt rename_file3.txt
+[redhat@localhost folder1]$ ls
+file1.txt  file.txt  rename_file3.txt
+[redhat@localhost folder1]$ mv file4.txt/home/redhat/folder4
+mv: missing destination file operand after `file4.txt/home/redhat/folder4'
+Try `mv --help' for more information.
+[redhat@localhost folder1]$ ls
+file1.txt  file.txt  rename_file3.txt
+[redhat@localhost folder1]$ mv file1.txt/home/redhat/folder5
+mv: missing destination file operand after `file1.txt/home/redhat/folder5'
+Try `mv --help' for more information.
+[redhat@localhost folder1]$ ls
+file1.txt  file.txt  rename_file3.txt
+[redhat@localhost folder1]$ mv file2.txt/home/redhat/folder7
+mv: missing destination file operand after `file2.txt/home/redhat/folder7'
+Try `mv --help' for more information.
+[redhat@localhost folder1]$ ls
+file1.txt  file.txt  rename_file3.txt
+[redhat@localhost folder1]$ mv file.txt/home/redhat/folder5
+mv: missing destination file operand after `file.txt/home/redhat/folder5'
+Try `mv --help' for more information.
+[redhat@localhost folder1]$ ls
+file1.txt  file.txt  rename_file3.txt
+[redhat@localhost folder1]$ mv file.txt /home/redhat/folder5
+[redhat@localhost folder1]$ ls
+file1.txt  rename_file3.txt
+[redhat@localhost folder1]$ cd
+[redhat@localhost ~]$ cd folder5
+[redhat@localhost folder5]$ ls 
+file.txt
+[redhat@localhost folder5]$ cat file.txt
+hello world 
+hay 
+how are you 
+where are you from
+d
+[redhat@localhost folder5]$ cd folder1
+bash: cd: folder1: No such file or directory
+[redhat@localhost folder5]$ cd folder1
+bash: cd: folder1: No such file or directory
+[redhat@localhost folder5]$ cd
+[redhat@localhost ~]$ cd folder1
+[redhat@localhost folder1]$ ls 
+file1.txt  rename_file3.txt
+[redhat@localhost folder1]$ cat file1.txt
+naeem kuraishi
+jeeshan khan
+naeem
+[redhat@localhost folder1]$ wc file1.txt
+ 3  5 34 file1.txt
+[redhat@localhost folder1]$ sort file1.txt
+jeeshan khan
+naeem
+naeem kuraishi
+[redhat@localhost folder1]$ ls
+file1.txt  rename_file3.txt
+[redhat@localhost folder1]$ cat>file4.txt
+1
+2
+3
+4
+5
+5
+[redhat@localhost folder1]$ cat file4.txt
+1
+2
+3
+4
+5
+5
+[redhat@localhost folder1]$ uniqe file4.txt
+bash: uniqe: command not found
+[redhat@localhost folder1]$ uniq file4.txt
+1
+2
+3
+4
+5
+[redhat@localhost folder1]$ uniq -d file4.txt
+5
+[redhat@localhost folder1]$ hostname
+localhost.localdomain
+[redhat@localhost folder1]$ hostname -i
+127.0.0.1
+[redhat@localhost folder1]$ histroy
+bash: histroy: command not found
+[redhat@localhost folder1]$ history
+    1  cd Desktop/
+    2  ls
+    3  cat Test.java
+    4  touch Test.java
+    5  ls
+    6  ll
+    7  ls- a
+    8  ls -a
+    9  ls -l
+   10  ls
+   11  ls -ltr
+   12  ls
+   13  ls
+   14  ls
+   15  ls
+   16  pwd
+   17  cd
+   18  mk dir
+   19  mv
+   20  cp
+   21  rm
+   22  touch
+   23  in
+   24  cat
+   25  ls
+   26  ls -ltr
+   27  cd folder1
+   28  cd..
+   29  ls
+   30  cd ..
+   31  ls
+   32  ls -ltr
+   33  cd folder1
+   34  cd ..
+   35  cd folder1
+   36  cd
+   37  pwd
+   38  cd folder2
+   39  pwd
+   40  cd
+   41  ls
+   42  mkdir folder3
+   43  ls
+   44  mkdir folder7
+   45  ls
+   46  ls
+   47  ls -ltr
+   48  cd folder1
+   49  cd..
+   50  cd
+   51  ls
+   52  ls -ltr
+   53  cd folder1
+   54  cd ..
+   55  pwd
+   56  cd folder2
+   57  pwd
+   58  mkdir folder4
+   59  ls
+   60  cd
+   61  ls
+   62  ls
+   63  mkdir folder4
+   64  ls
+   65  ls
+   66  ls -ltr
+   67  cd folder3
+   68  pwd
+   69  cd ..
+   70  mkdir folder5
+   71  ls
+   72  touch Desktop
+   73  ls
+   74  touch folder1
+   75  ls
+   76  touch folder6
+   77  ls
+   78  cd folder1
+   79  cat>file.txt
+   80  cat file.txt
+   81  cat>file1.txt
+   82  cat file.txt file1.txt>file2.txt
+   83  ls
+   84  cat file2.txt
+   85  mv file2.txt rename_file3.txt
+   86  ls
+   87  mv file4.txt/home/redhat/folder4
+   88  ls
+   89  mv file1.txt/home/redhat/folder5
+   90  ls
+   91  mv file2.txt/home/redhat/folder7
+   92  ls
+   93  mv file.txt/home/redhat/folder5
+   94  ls
+   95  mv file.txt /home/redhat/folder5
+   96  ls
+   97  cd
+   98  cd folder5
+   99  ls 
+  100  cat file.txt
+  101  cd folder1
+  102  cd folder1
+  103  cd
+  104  cd folder1
+  105  ls 
+  106  cat file1.txt
+  107  wc file1.txt
+  108  sort file1.txt
+  109  ls
+  110  cat>file4.txt
+  111  cat file4.txt
+  112  uniqe file4.txt
+  113  uniq file4.txt
+  114  uniq -d file4.txt
+  115  hostname
+  116  hostname -i
+  117  histroy
+  118  history
+[redhat@localhost folder1]$ ls
+file1.txt  file4.txt  rename_file3.txt
+[redhat@localhost folder1]$ cat>file5.txt
+1
+2
+3
+45
+6
+6
+7
+89
+10
+1
+12
+13
+14
+15
+16
+17
+18
+19
+20
+[redhat@localhost folder1]$ ls
+file1.txt  file4.txt  file5.txt  rename_file3.txt
+[redhat@localhost folder1]$ cat file4.txt
+1
+2
+3
+4
+5
+5
+[redhat@localhost folder1]$ cat file5.txt
+1
+2
+3
+45
+6
+6
+7
+89
+10
+1
+12
+13
+14
+15
+16
+17
+18
+19
+20
+[redhat@localhost folder1]$ head file5.txt
+1
+2
+3
+45
+6
+6
+7
+89
+10
+1
+[redhat@localhost folder1]$ tail file5.txt
+1
+12
+13
+14
+15
+16
+17
+18
+19
+20
+[redhat@localhost folder1]$ tac file5.txt
+20
+19
+18
+17
+16
+15
+14
+13
+12
+1
+10
+89
+7
+6
+6
+45
+3
+2
+1
+[redhat@localhost folder1]$ rm file1.txt
+[redhat@localhost folder1]$ ls
+file4.txt  file5.txt  rename_file3.txt
+[redhat@localhost folder1]$ cd
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder6  folder7
+[redhat@localhost ~]$ cd folder7
+[redhat@localhost folder7]$ cd
+[redhat@localhost ~]$ rmdir folder7
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder6
+[redhat@localhost ~]$ cd folder1
+[redhat@localhost folder1]$ cd
+[redhat@localhost ~]$ rmdir folder1
+rmdir: folder1: Directory not empty
+[redhat@localhost ~]$ cd folder1
+[redhat@localhost folder1]$ ls =ltr
+ls: =ltr: No such file or directory
+[redhat@localhost folder1]$ ls -ltr
+total 24
+-rw-rw-r-- 1 redhat redhat 86 Jul  5 23:56 rename_file3.txt
+-rw-rw-r-- 1 redhat redhat 12 Jul  6 00:15 file4.txt
+-rw-rw-r-- 1 redhat redhat 50 Jul  6 00:26 file5.txt
+[redhat@localhost folder1]$ chmod g=w,o=w file4.txt
+[redhat@localhost folder1]$ ls =ltr
+ls: =ltr: No such file or directory
+[redhat@localhost folder1]$ ls -ltr
+total 24
+-rw-rw-r-- 1 redhat redhat 86 Jul  5 23:56 rename_file3.txt
+-rw--w--w- 1 redhat redhat 12 Jul  6 00:15 file4.txt
+-rw-rw-r-- 1 redhat redhat 50 Jul  6 00:26 file5.txt
+[redhat@localhost folder1]$ cd
+[redhat@localhost ~]$ ls
+Desktop  folder1  folder2  folder3  folder4  folder5  folder6
+[redhat@localhost ~]$ cd folder4
+[redhat@localhost folder4]$ cat>file7.txt
+mridul
+Mridul
+hello
+world
+saksham
+pandey
+lokesh
+yadav
+Lokesh
+suyash
+batham
+lokesh
+[redhat@localhost folder4]$ ls
+file7.txt
+[redhat@localhost folder4]$ grep "mridul" file7.txt
+mridul
+[redhat@localhost folder4]$  grep "mridul" file7.txt
+mridul
+[redhat@localhost folder4]$ grep -i"mridul" file7.txt
+grep: invalid max count
+[redhat@localhost folder4]$ grep -i "mridul" file7.txt
+mridul
+Mridul
+[redhat@localhost folder4]$ grep -c "mridul" file7.txt
+1
+[redhat@localhost folder4]$ grep "[LMNOPQRS]" file7.txt
+Mridul
+Lokesh
+[redhat@localhost folder4]$ 
+

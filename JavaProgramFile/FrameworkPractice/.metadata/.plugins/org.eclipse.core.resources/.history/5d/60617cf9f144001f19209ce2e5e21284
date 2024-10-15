@@ -1,0 +1,20 @@
+package com.rowmapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.dto.User;
+
+public class UserRowMapper implements RowMapper<User> {
+
+	@Override
+	public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+		User u=new User();
+		u.getId(rs.getInt("id"));
+		u.getName(rs.getString("name"));
+		return u;
+	}
+
+}

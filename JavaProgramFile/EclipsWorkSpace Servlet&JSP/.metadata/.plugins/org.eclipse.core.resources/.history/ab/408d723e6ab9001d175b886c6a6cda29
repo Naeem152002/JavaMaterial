@@ -1,0 +1,9 @@
+package Com.string;
+
+public class StringMethod 
+{
+String si="AKASH";
+String s2=new String("Munish");
+ char ch[]= {'D','E','E','P','A','K'};
+ String s3=new String(ch);
+}

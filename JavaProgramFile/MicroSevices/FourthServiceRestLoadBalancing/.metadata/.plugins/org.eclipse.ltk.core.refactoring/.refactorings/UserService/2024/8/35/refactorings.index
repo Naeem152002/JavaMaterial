@@ -1,0 +1,15 @@
+1724583093755	Delete element
+1724583205976	Delete element
+1724650634465	Rename package 'com.lcwd.user.service'
+1724650647773	Rename package 'com.lcwd.user.service.config'
+1724650661763	Rename package 'com.lcwd.user.service.controllers'
+1724650680722	Rename package 'com.lcwd.user.service.exceptions'
+1724650704820	Rename package 'com.entities'
+1724650716733	Rename package 'com.lcwd.user.service.entities'
+1724650728898	Rename package 'com.lcwd.user.service.payloads'
+1724650741677	Rename package 'com.lcwd.user.service.repositories'
+1724650759642	Rename package 'com.lcwd.user.service.services'
+1724758278587	Copy compilation unit
+1724811718816	Delete element
+1724811864683	Infer generic type arguments
+1724818376327	Delete element

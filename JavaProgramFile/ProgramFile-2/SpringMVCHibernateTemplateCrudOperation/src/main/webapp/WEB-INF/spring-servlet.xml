@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd">
+ 
+ 
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds"> 
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/> 
+        <property name="url" value="jdbc:mysql://localhost:3306/hibernate"/> 
+        <property name="username" value="root"/> 
+        <property name="password" value="1234"/> 
+    </bean> 
+
+    <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" id="factory"> 
+        <property name="dataSource" ref="ds"/> 
+        <property name="hibernateProperties"> 
+            <props> 
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop> 
+                <prop key="hibernate.show_sql">true</prop> 
+                <prop key="hibernate.format_sql">true</prop> 
+                <prop key="hibernate.hbm2ddl.auto">update</prop> 
+            </props> 
+        </property> 
+        <property name="mappingResources"> 
+            <list> 
+                <value>user.hbm.xml</value> 
+            </list> 
+        </property> 
+       <!--  <property name="annotatedClasses"> 
+			<list> 
+				<value>com.springorm.SpringORM.entities.User</value> 
+			</list> 
+		</property> 
+		--> 
+    </bean> 
+
+    <bean class="org.springframework.orm.hibernate5.HibernateTemplate" id="hTemplate"> 
+        <property name="sessionFactory" ref="factory"/> 
+    </bean> 
+<!-- Transaction manager configuration -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="factory"/>
+    </bean>
+
+    <!-- Enable transaction management -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
+<context:component-scan base-package="com"/>
+	<bean  id="viewResolver"  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+</beans>
+

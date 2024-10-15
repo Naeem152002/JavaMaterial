@@ -1,0 +1,60 @@
+package com.lcwd.rating.service.services;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lcwd.rating.service.dto.RatingDto;
+import com.lcwd.rating.service.entities.Rating;
+import com.lcwd.rating.service.repository.RatingRepo;
+
+@Service
+public class RatingServiceImpl implements RatingService {
+
+	
+	@Autowired
+	private RatingRepo ratingRepo;
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+	@Override
+	public RatingDto saveRating(RatingDto ratingDto) {
+		Rating rating=modelMapper.map(ratingDto, Rating.class);
+		 Rating save=this.ratingRepo.save(rating);
+		 return modelMapper.map(save, RatingDto.class);
+	}
+
+	@Override
+	public RatingDto updateRating(RatingDto ratingDto, int ratingId) {
+		Rating rating=ratingRepo.findById(ratingId).orElseThrow(()-> new RuntimeException("Rating not found with Id="+ratingId));
+		
+		return null;
+	}
+	@Override
+	public void deleteRating(int ratingId) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public RatingDto getSingleRating(int ratingId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<RatingDto> getAllRatings() {
+		return this.ratingRepo.findAll();
+	}
+	@Override
+	public List<RatingDto> getRatingByHotelId(int hotelId) {
+		// TODO Auto-generated method stub
+		return ratingRepo.findByHotelId(hotelId);
+	}
+
+	@Override
+	public List<RatingDto> getRatingByUserId(int userId) {
+		return ratingRepo.findByUserId(userId);
+	}
+}

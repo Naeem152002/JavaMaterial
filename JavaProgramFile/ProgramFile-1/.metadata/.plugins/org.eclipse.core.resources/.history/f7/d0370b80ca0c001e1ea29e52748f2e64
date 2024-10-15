@@ -1,0 +1,21 @@
+package ecp;
+
+	class C{
+		void show() throws Exception{
+		}	
+		C ()throws Exception{
+		}
+		}
+	public class Test22 extends C {
+		//Test22()throws IOException {// child class ka Exception not valid 
+		Test22()throws Exception{
+			
+		}
+		void show() throws ArithmeticException{
+		}
+	public static void main(String ags[]) {
+		
+	}
+	}
+
+

@@ -1,0 +1,9 @@
+package com.sorting;
+
+public class Test15 {
+	
+	public static void subArrays(int a[]) {//subarray=n(n+1)/2
+		
+	}
+
+}

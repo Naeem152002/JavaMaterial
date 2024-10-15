@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.user.User" table="user100">
+		<id name="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name"></property>
+
+		<list name="address" table="adress">
+			<key column="aid"></key>
+			<index column="type"></index>
+			<element column="address" type="string"></element>
+		</list>
+
+	</class>
+
+
+</hibernate-mapping>

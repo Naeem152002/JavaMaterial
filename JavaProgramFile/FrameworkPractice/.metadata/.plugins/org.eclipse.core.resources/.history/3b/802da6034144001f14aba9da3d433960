@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="register.jsp" method="post">
+<div>
+<label for="name">Enter Name</label>	
+<input type="text" id="name" name="name" placeholder="Enter Name"/>	
+</div>	
+<div>
+<label for="email">Enter email</label>	
+<input type="text" id="name" name="name" placeholder="Enter Name"/>	
+</div>	
+<div>
+<label for="name">Enter Name</label>	
+<input type="text" id="name" name="name" placeholder="Enter Name"/>	
+</div>	
+<div>
+<label for="name">Enter Name</label>	
+<input type="text" id="name" name="name" placeholder="Enter Name"/>	
+</div>	
+	
+	
+</form>
+</body>
+</html>

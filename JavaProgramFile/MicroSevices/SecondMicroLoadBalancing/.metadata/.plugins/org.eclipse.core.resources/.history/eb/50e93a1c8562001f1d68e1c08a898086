@@ -1,0 +1,30 @@
+package com.service.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.service.entities.Question;
+import com.service.services.QuestionService;
+
+@RestController
+public class QuestionController {
+	
+	
+	@Autowired
+	private QuestionService questionService;
+
+	
+	public Question createQuestion(@RequestBody Question question) {
+		return questionService.createQuestion(question);
+	}
+	public List<Question> getAllQuestions() {
+		return questionService.getAllQuestion();
+	}
+	public Question getSingleQuestion(@PathVariable int questionId) {
+		return questionService.getSingleQuestion(questionId);
+	}
+}

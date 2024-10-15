@@ -1,0 +1,32 @@
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class ManProduct extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	String shirt=request.getParameter("mproduct");
+	String shoes=request.getParameter("mproduct");
+	String tshirt=request.getParameter("mproduct");
+	String slipper=request.getParameter("mproduct");
+	String jeanse=request.getParameter("mproduct");
+	
+	response.setContentType("text/html");
+	PrintWriter printWriter=response.getWriter();
+	printWriter.println(shirt);
+	printWriter.println(shoes);
+	printWriter.println( tshirt);
+	printWriter.println(slipper);
+	printWriter.println(jeanse);
+	
+	}
+
+}
